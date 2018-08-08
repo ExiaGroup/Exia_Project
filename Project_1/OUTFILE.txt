@@ -31,8 +31,9 @@ The r value is: 0.8986315513535972
 This shows a strong positive linear correlation 
 The r square value is: 0.9084206911868056
 This shows that the fitted regression line is a good fit for the data
+
 The F-statistic is: 0.700961575313078
- and the p-value is: 0.6008542399851882
+and the p-value is: 0.6008542399851882
 the .6 p-value is greater than .05 alpha, so the null hypothesis is not rejected 
 
 gpa statistics:count 24.0

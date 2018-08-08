@@ -148,9 +148,9 @@ F_statistic, P_value = scipy.stats.f_oneway(sec_data.get_group(1.0)['final'],
                     sec_data.get_group(3.0)['final'],
                     sec_data.get_group(4.0)['final'],
                     sec_data.get_group(5.0)['final'])
-file.write('\nThe F-statistic is: ')
+file.write('\n\nThe F-statistic is: ')
 file.write(str(F_statistic))
-file.write('\n and the p-value is: ')
+file.write('\nand the p-value is: ')
 file.write(str(P_value))
 file.write('\nthe .6 p-value is greater than .05 alpha, so the null hypothesis is not'
       ' rejected \n')
