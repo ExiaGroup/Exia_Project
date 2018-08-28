@@ -126,13 +126,6 @@ CancerRates$state <- state.abb[match(CancerRates$state,state.name)]
 ##selecting 1 disease data from leadingcausedeath
 stroke_death <- filter(leadingcausedeath, CAUSE_NAME == 'Stroke')
 #------------------------------------------------------------------------------------------------------------------------------
-#-------------------------------------------------------Clean Data to CSV------------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------------
-write.csv(CancerRates, file = 'Cleaned_CancerRates.csv',row.names = FALSE, na='')
-write.csv(county_info, file = 'Cleaned_CountyInfo.csv', row.names = FALSE, na='')
-write.csv(stroke_death,file = 'Cleaned_strokedeath.csv', row.names = FALSE, na='')
-write.csv(uscounty_presidentialresults, file = 'Cleaned_uscounty_presidentialresults.csv',row.names = FALSE, na='')
-#------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------loading US Map Polygon data--------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
 #Download county shape file and state shape file
