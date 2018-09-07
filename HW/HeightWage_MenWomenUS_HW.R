@@ -9,7 +9,11 @@ dataset <- read.csv("HeightWage_MenWomenUS_HW.csv", header = TRUE, sep = ",")
 a <- c(7,12,13,16)
 datasetSiblingsHeightWage <- dataset[,a]
 summary(datasetSiblingsHeightWage)
-##discuss the results 
+##The mean height stayed relatively the same, which is odd because you would expect people to grow taller becaues of puberty
+##Also, the max height dropped from 83 to 81 showing error in the data collection process
+##The amount of NA's is very concerning becaues it will skew the results
+##The mean siblings is 3, but the max siblings is 29 and highly unlikely.  This eludes to the possibility that some data points are entered in wrong
+##Also, the max wage is 1533 and highly unlikely.  Possible the data was entered in wrong.  
 
 
 ##B
