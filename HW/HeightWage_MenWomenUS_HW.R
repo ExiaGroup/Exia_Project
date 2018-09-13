@@ -21,15 +21,19 @@ wageHeight <- c(3,4)
 datasetSiblingsHeightWage[,wageHeight] %>%
   ggplot(aes(x = wage96, y = height85, color = height85)) +
   scale_color_gradientn(colours = rainbow(5))+
-  geom_point()
-##the slope looks like it might be undefined
-##height might be normally distributed
+  geom_point()+
+  geom_smooth(method = 'lm', fill = NA) 
+##the slope is positive which shows a positive correlation between wage and height
+##there are outliers in the dataset and is shown in the graph 
+
 
 ##C
 datasetSiblingsHeightWage[which(datasetSiblingsHeightWage$wage96 < 500),wageHeight] %>%
   ggplot(aes(x= wage96, y = height85, color = height85)) + 
-  scale_color_gradientn(colours = rainbow(5))+
-  geom_point()
+  scale_color_gradientn(colours = rainbow(5))
+  geom_point()+
+  geom_smooth(method = 'lm', fill = NA) 
+##there is a positive correlation between wage and height
 
 
 ##D
@@ -39,12 +43,12 @@ datasetSiblingsHeightWage[,adolescentHeightVsAdultHeight] %>%
   scale_color_gradientn(colours = rainbow(5)) +
   geom_point()
 ##lets look at points where y = 70.  If the point has x < 70, then those points signal a decrease in height as person ages
-##therefore, we ignore those points
+##therefore, we ignore those points where people's adolescent height is less than their adult height
 ##Should not use these observations because it is unlikely that one's height will decrease as one ages. 
-
-
-
-
+datasetSiblingsHeightWage[which(datasetSiblingsHeightWage$height81 > datasetSiblingsHeightWage$height85),] %>%
+  ggplot(aes(x=height85, y = height81, color = height81)) +
+  scale_color_gradientn(colours = rainbow(5)) +
+  geom_point()
 
 
 
