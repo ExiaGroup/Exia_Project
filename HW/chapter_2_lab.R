@@ -11,19 +11,23 @@ Arlington <- dataset[which(dataset$precinct == "AR49" | dataset$precinct == "AR2
                            | dataset$precinct == "AR18" | dataset$precinct == "41" | dataset$precinct == "16" 
                            | dataset$precinct == "4" | dataset$precinct == "17" | dataset$precinct == "31" 
                            | dataset$precinct == "48" | (dataset$precinct == "2" & dataset$state == 4)),]
+table(Arlington$precinct)
 
 PrinceWilliam <- dataset[which(dataset$precinct == "PW 101" | dataset$precinct == "PW 104" | dataset$precinct == "PW 401" 
                                | dataset$precinct == "PW101" | dataset$precinct == "PW104" | dataset$precinct == "PW402" 
                                | dataset$precinct == "PW406" | dataset$precinct == "401" | dataset$precinct == "402" |
                                  (dataset$precinct == "104" & dataset$state == 4)),]
-
+table(PrinceWilliam$precinct)
 
 ##Number 2 
 DC <- length(which(dataset$state == 1))
+DC
 MD <- length(which(dataset$state == 2))
+MD
 OH <- length(which(dataset$state == 3))
+OH
 VA <- length(which(dataset$state == 4))
-
+VA
 
 ##Number 3
 ##minimum age is 17
@@ -39,8 +43,9 @@ mean(dataset$age)
 
 ##number 4
 table(dataset$gender)
-##it looks like anything that else got assigned a value of 0 
 dataset[which(dataset$gender == 1),'male'] <- 1
+dataset[which(dataset$gender == 2),'male'] <- 0
+dataset[which(dataset$gender == 3),'male'] <- 0
 table(dataset$male)
 
 ##number 5

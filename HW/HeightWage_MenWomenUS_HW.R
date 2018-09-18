@@ -43,7 +43,7 @@ datasetSiblingsHeightWage[,adolescentHeightVsAdultHeight] %>%
   scale_color_gradientn(colours = rainbow(5)) +
   geom_point()
 ##lets look at points where y = 70.  If the point has x < 70, then those points signal a decrease in height as person ages
-##therefore, we ignore those points where people's adolescent height is less than their adult height
+##therefore, we ignore those points where people's adolescent height is greater than their adult height
 ##Should not use these observations because it is unlikely that one's height will decrease as one ages. 
 datasetSiblingsHeightWage[which(datasetSiblingsHeightWage$height81 > datasetSiblingsHeightWage$height85),] %>%
   ggplot(aes(x=height85, y = height81, color = height81)) +
